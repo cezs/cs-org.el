@@ -23,11 +23,11 @@ M-x cs-org-delete-generated-files
 *** Use single Org file to prepare multi-file Emacs package archive
 
 Sources inside org file have to be annotated as follows,
-#+begin_example
-#+begin_src <your-language> :tangle yes :exports code :comments link
-  <your-code>
+#+begin_src org
+,#+begin_src emacs-lisp :tangle yes :exports code :comments link
+<your-code>
+,#+end_src
 #+end_src
-#+end_example
 where =:comments link= is required for detangling.
 
 Run the following command in order to build the package archive 
